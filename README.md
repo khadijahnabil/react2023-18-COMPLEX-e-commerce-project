@@ -156,3 +156,26 @@ const someComponent = () => {
   )
 
 ```
+
+#### setting up form submissions
+
+- suggestion: use some kind of service to store and send form submissions
+
+e.g. https://formspree.io/
+
+```js
+<form
+  className='contact-form'
+  action='https://formspree.io/f/zkxbyayjz'
+  method='POST'>
+  <input
+    type='email'
+    className='form-input'
+    placeholders='enter email'
+    name='_replyto'
+  />
+  <button type='submit' className='form-btn'>
+    Subscribe
+  </button>
+</form>
+```
