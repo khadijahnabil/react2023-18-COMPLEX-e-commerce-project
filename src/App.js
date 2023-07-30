@@ -16,6 +16,7 @@ import {
   Products,
   PrivateRoute,
 } from "./pages";
+import { Navbar, Sidebar, Footer } from "./components";
 
 const router = createBrowserRouter([
   {
@@ -53,7 +54,10 @@ const router = createBrowserRouter([
 function App() {
   return (
     <Router>
+      <Navbar />
+      <Sidebar />
       <RouterProvider router={router} />
+      <Footer />
     </Router>
   );
 }

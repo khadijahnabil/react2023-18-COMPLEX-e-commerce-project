@@ -4,12 +4,9 @@ import { Navbar, Sidebar, Footer } from "../components";
 const HomeLayout = () => {
   return (
     <>
-      <Navbar />
-      <Sidebar />
       <section className='page'>
         <Outlet />
       </section>
-      <Footer />
     </>
   );
 };
