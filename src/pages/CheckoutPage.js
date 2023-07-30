@@ -5,7 +5,7 @@ import { PageHero, StripeCheckout } from "../components";
 import { useCartContext } from "../context/cart_context";
 import { Link } from "react-router-dom";
 
-const CheckoutPage = ({ title }) => {
+const CheckoutPage = () => {
   return (
     <main>
       <PageHero title='Checkout' />
