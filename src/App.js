@@ -6,7 +6,6 @@ import {
   createBrowserRouter,
 } from "react-router-dom-v5-compat";
 import {
-  HomeLayout,
   Home,
   SingleProduct,
   Cart,
@@ -18,45 +17,32 @@ import {
 } from "./pages";
 import { Navbar, Sidebar, Footer } from "./components";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomeLayout />,
-    errorElement: <Error />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/cart",
-        element: <Cart />,
-      },
-      {
-        path: "/products",
-        element: <Products />,
-      },
-      {
-        path: "/products/:id",
-        element: <SingleProduct />,
-      },
-      {
-        path: "/checkout",
-        element: <Checkout />,
-      },
-    ],
-  },
-]);
 function App() {
   return (
     <Router>
       <Navbar />
       <Sidebar />
-      <RouterProvider router={router} />
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route exact path='/about'>
+          <About />
+        </Route>
+        <Route exact path='/cart'>
+          <Cart />
+        </Route>
+        <Route exact path='/products'>
+          <Products />
+        </Route>
+        <Route exact path='products/:id' children={<SingleProduct />} />
+        <Route exact path='/checkout'>
+          <Checkout />
+        </Route>
+        <Route exact path='*'>
+          <Error />
+        </Route>
+      </Switch>
       <Footer />
     </Router>
   );
