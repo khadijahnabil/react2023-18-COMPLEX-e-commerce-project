@@ -2,14 +2,12 @@ import { createContext, useContext, useReducer } from "react";
 import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from "../actions";
 import reducer from "../reducers/sidebar_reducer";
 
-const initialState = {
-  isSidebarOpen: false,
-};
+const isSidebarOpen = false;
 
 const SidebarContext = createContext();
 
 export const SidebarProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, isSidebarOpen);
 
   const openSidebar = () => {
     dispatch({ type: SIDEBAR_OPEN });
