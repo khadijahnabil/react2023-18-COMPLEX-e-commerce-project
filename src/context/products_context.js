@@ -53,7 +53,8 @@ export const ProductsProvider = ({ children }) => {
   };
 
   return (
-    <ProductsContext.Provider value={{ ...state, fetchProducts }}>
+    <ProductsContext.Provider
+      value={{ ...state, fetchProducts, fetchSingleProduct }}>
       {children}
     </ProductsContext.Provider>
   );
