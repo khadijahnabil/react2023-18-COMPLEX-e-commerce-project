@@ -39,8 +39,8 @@ export const FilterProvider = ({ children }) => {
 
   const updateSort = (e) => {
     // for demonstration purposes -> use it in filters
-    // let name = e.target.name;
-    let value = e.target.value;
+    // const name = e.target.name;
+    const value = e.target.value;
     dispatch({ type: UPDATE_SORT, payload: value });
   };
 
