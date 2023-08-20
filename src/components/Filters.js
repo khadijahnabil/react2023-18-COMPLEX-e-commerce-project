@@ -20,6 +20,11 @@ const Filters = () => {
     clearFilters,
     all_products,
   } = useFilterContext();
+
+  let categories = getUniqueValues(all_products, "category");
+  let companies = getUniqueValues(all_products, "company");
+  let colors = getUniqueValues(all_products, "colors");
+
   return (
     <Wrapper>
       <div className='content'>
