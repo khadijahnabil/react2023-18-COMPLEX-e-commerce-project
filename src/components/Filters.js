@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useFilterContext } from "../context/filter_context";
 import { getUniqueValues, formatPrice } from "../utils/helpers";
 import { FaCheck } from "react-icons/fa";
+import { UPDATE_FILTERS } from "../actions";
 
 const Filters = () => {
   const {
@@ -37,6 +38,20 @@ const Filters = () => {
               placeholder='search'
               value={text}
               onChange={updateFilters}></input>
+          </div>
+          <div>
+            {categories.map((c, index) => {
+              return (
+                <button
+                  key={index}
+                  type='button '
+                  name='category'
+                  className={category === c.toLowerCase() ? "active" : null}
+                  onClick={updateFilters}>
+                  {c}
+                </button>
+              );
+            })}
           </div>
         </form>
       </div>
