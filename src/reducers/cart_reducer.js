@@ -24,7 +24,7 @@ const cart_reducer = (state, action) => {
             newAmount = cartItem.max;
           }
           // 8 then we change the amount property to the new amount
-          return { ...state, amount: newAmount };
+          return { ...cartItem, amount: newAmount };
         } else {
           // 9 if cartItem id doesn't match, we just return to our array
           return cartItem;
