@@ -1,5 +1,4 @@
-import { Outlet, useNavigation } from "react-router-dom-v5-compat";
-import { Navbar, Sidebar, Footer } from "../components";
+import { Outlet } from "react-router-dom-v5-compat";
 
 const HomeLayout = () => {
   return (
