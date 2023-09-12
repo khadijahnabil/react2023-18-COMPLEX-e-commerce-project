@@ -7,11 +7,9 @@ import Checkout from "./CheckoutPage";
 import Error from "./ErrorPage";
 import Home from "./HomePage";
 import PrivateRoute from "./PrivateRoute";
-import HomeLayout from "./HomeLayout";
 import AuthWrapper from "./AuthWrapper";
 
 export {
-  HomeLayout,
   Page,
   Products,
   SingleProduct,
