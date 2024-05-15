@@ -309,7 +309,7 @@ const obj = [
 exports.handler = async function (event, context) {
   return {
     statusCode: 200,
-    body: obj,
+    body: JSON.stringify(obj),
     headers: {
       /* Required for CORS support to work */
       'Access-Control-Allow-Origin': '*',
