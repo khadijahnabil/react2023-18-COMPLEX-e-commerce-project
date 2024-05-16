@@ -509,10 +509,12 @@ const updatedObjects = obj.map(obj => ({
 }));
 
 exports.handler = async function (event, context) {
-  const { id } = event.queryStringParameters;
+  const paths = event.path.split("/")
+  const id = paths.pop()
+
   return {
     statusCode: 200,
-    body: JSON.stringify(updatedObjects[0]),
+    body: JSON.stringify(updatedObjects.filter(obj => obj.id === id)),
     headers: {
       /* Required for CORS support to work */
       'Access-Control-Allow-Origin': '*',
