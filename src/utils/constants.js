@@ -44,4 +44,5 @@ export const services = [
 
 export const products_url = 'https://kcodes-comfy-sloth-fake-e-commerce.netlify.app/.netlify/functions/mock-data'
 
-export const single_product_url = `https://course-api.com/react-store-single-product?id=`
+export const single_product_url = `https://kcodes-comfy-sloth-fake-e-commerce.netlify.app/.netlify/functions/mock-data-single-product`
+// export const single_product_url = `https://course-api.com/react-store-single-product?id=`

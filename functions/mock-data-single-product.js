@@ -503,11 +503,16 @@ const images = [
   }
 ]
 
+const updatedObjects = obj.map(obj => ({
+  ...obj,
+  images: images
+}));
+
 exports.handler = async function (event, context) {
   const { id } = event.queryStringParameters;
   return {
     statusCode: 200,
-    body: JSON.stringify(obj.filter(x => x.id === id).push(images)),
+    body: JSON.stringify(updatedObjects.filter(x => x.id === id)),
     headers: {
       /* Required for CORS support to work */
       'Access-Control-Allow-Origin': '*',
