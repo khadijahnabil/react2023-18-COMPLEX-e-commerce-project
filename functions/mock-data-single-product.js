@@ -514,7 +514,7 @@ exports.handler = async function (event, context) {
 
   return {
     statusCode: 200,
-    body: JSON.stringify(updatedObjects.filter(obj => obj.id === id)),
+    body: JSON.stringify(updatedObjects[0]),
     headers: {
       /* Required for CORS support to work */
       'Access-Control-Allow-Origin': '*',
